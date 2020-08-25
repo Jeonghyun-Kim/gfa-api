@@ -1,7 +1,7 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { Sequelize } from 'sequelize';
 import * as sharp from 'sharp';
-import { uuid } from 'uuidv4';
+import * as uuid from 'uuid';
 import * as sha256 from 'sha256';
 import * as multer from 'multer';
 
@@ -10,8 +10,6 @@ import { Artwork } from '../../models/Artwork';
 import { HTTP_CODE, DB_CODE } from '../../defines';
 import { uploadS3 } from '../utils/common';
 import { convertImage } from '../utils/image';
-
-// import logger from '../../config/winston_config';
 
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -57,7 +55,9 @@ router.post(
         .json({ error: DB_CODE.CHECK_REQUEST });
 
     try {
-      const landscapeFileName = landFile ? `${sha256(uuid())}.jpg` : undefined;
+      const landscapeFileName = landFile
+        ? `${sha256(uuid.v4())}.jpg`
+        : undefined;
 
       if (landscapeFileName) {
         await new Promise((resolve) => {
@@ -81,7 +81,9 @@ router.post(
         });
       }
 
-      const portraitFileName = portFile ? `${sha256(uuid())}.jpg` : undefined;
+      const portraitFileName = portFile
+        ? `${sha256(uuid.v4())}.jpg`
+        : undefined;
 
       if (portraitFileName) {
         await new Promise((resolve) => {

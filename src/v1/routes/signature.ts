@@ -1,6 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import * as sharp from 'sharp';
-import { uuid } from 'uuidv4';
+import * as uuid from 'uuid';
 import * as sha256 from 'sha256';
 import * as multer from 'multer';
 import * as path from 'path';
@@ -56,7 +56,7 @@ router.post(
     try {
       const sigFile = req.file;
       const fileName = sigFile
-        ? `${sha256(uuid())}${path.extname(req.file.originalname)}`
+        ? `${sha256(uuid.v4())}${path.extname(req.file.originalname)}`
         : undefined;
       if (fileName) {
         if (isProduction) {
