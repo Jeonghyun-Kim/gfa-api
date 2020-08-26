@@ -1,6 +1,5 @@
 node_modules
-public/*
-!public/artworks
+public
 build
 .env
 package-lock.json
