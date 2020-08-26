@@ -60,7 +60,11 @@ router.post(
         : undefined;
       if (fileName) {
         if (isProduction) {
-          await uploadS3(process.env.AWS_BUCKET!, fileName, sigFile.buffer);
+          await uploadS3(
+            process.env.AWS_BUCKET!,
+            `signatures/${fileName}`,
+            sigFile.buffer,
+          );
         } else {
           sharp(sigFile.buffer).toFile(`./public/signatures/${fileName}`);
         }

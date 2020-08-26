@@ -4,12 +4,14 @@ import {
   Column,
   AllowNull,
   Length,
-  Default,
   CreatedAt,
   UpdatedAt,
   DeletedAt,
+  ForeignKey,
+  BelongsTo,
 } from 'sequelize-typescript';
 
+import { Artist } from './Artist';
 @Table({
   tableName: 'artwork',
   freezeTableName: true,
@@ -19,27 +21,14 @@ import {
   collate: 'utf8mb4_unicode_ci',
 })
 export class Artwork extends Model<Artwork> {
+  @Length({ max: 70 })
+  @Column
+  fileName!: string;
+
+  @ForeignKey(() => Artist)
   @AllowNull(false)
   @Column
   artistId!: number;
-
-  @Length({ max: 70 })
-  @Column
-  landscapeFileName!: string;
-
-  @Length({ max: 70 })
-  @Column
-  portraitFileName!: string;
-
-  @AllowNull(false)
-  @Default(0)
-  @Column
-  hitCount!: number;
-
-  @AllowNull(false)
-  @Default(0)
-  @Column
-  seeMoreCount!: number;
 
   @CreatedAt
   @Column
@@ -52,6 +41,11 @@ export class Artwork extends Model<Artwork> {
   @DeletedAt
   @Column
   deletedAt!: Date;
+
+  @BelongsTo(() => Artist, {
+    foreignKey: 'artistId',
+  })
+  artist!: Artist;
 }
 
 export default Artwork;

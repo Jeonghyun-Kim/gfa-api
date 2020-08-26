@@ -10,7 +10,9 @@ export const DB_CODE = {
   FILE_EMPTY: 4,
   EMPTY_USER_ID: 5,
   PASSWORD_WRONG: 6,
-  NO_SUCH_ARTWORK: 11,
+  REP_FILE_EMPTY: 7,
+  RENDERED_FILE_EMPTY: 8,
+  NO_SUCH_ARTIST: 11,
 };
 
 export const HTTP_CODE = {
@@ -79,7 +81,10 @@ export const HTTP_CODE = {
   NETWORK_AUTHENTICATION_REQUIRED: 511,
 };
 
+export const THUMBNAIL_SIZE = 300;
+
 export default {
   HTTP_CODE,
   DB_CODE,
+  THUMBNAIL_SIZE,
 };
