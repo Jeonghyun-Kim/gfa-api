@@ -11,8 +11,6 @@ import { HTTP_CODE, DB_CODE, THUMBNAIL_SIZE } from '../../defines';
 import { uploadS3 } from '../utils/common';
 import { convertImage } from '../utils/image';
 
-// import * as fileInfo from './filenames.json';
-
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
