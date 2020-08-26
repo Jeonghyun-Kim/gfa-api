@@ -381,7 +381,7 @@ router.get(
   async (req: Request, res: Response, next: NextFunction) => {
     const { artistId } = req.params;
     try {
-      const artist = await Artist.scope('withArtworks').findOne({
+      const artist = await Artist.findOne({
         where: { id: artistId },
       });
       if (!artist)

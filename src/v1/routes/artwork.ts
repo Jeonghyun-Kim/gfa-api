@@ -37,7 +37,7 @@ router.post(
         let counter = 0;
         inputFIles.forEach(async (file) => {
           const fileName = `${sha256(uuid.v4())}.jpg`;
-          const artistId = file.originalname.split('_')[0];
+          const artistId = Number(file.originalname.split('_')[0]);
           const artworkId = fileInfo.find((elem: fileInfoInterface) => {
             if (elem.before === file.originalname.split('.')[0]) return true;
           })?.artworkId;

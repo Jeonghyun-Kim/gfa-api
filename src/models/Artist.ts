@@ -9,21 +9,26 @@ import {
   UpdatedAt,
   DeletedAt,
   HasMany,
-  Scopes,
+  DefaultScope,
   PrimaryKey,
 } from 'sequelize-typescript';
 
 import { Artwork } from './Artwork';
 
-@Scopes(() => ({
-  withArtworks: {
-    include: [
-      {
-        model: Artwork,
-        as: 'artworks',
-      },
-    ],
-  },
+@DefaultScope(() => ({
+  attributes: [
+    'id',
+    'thumbFileName',
+    'landscapeFileName',
+    'portraitFileName',
+    'hitCount',
+    'seeMoreCount',
+  ],
+  include: [
+    {
+      all: true,
+    },
+  ],
 }))
 @Table({
   tableName: 'artist',

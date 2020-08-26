@@ -8,8 +8,12 @@ import {
   CreatedAt,
   UpdatedAt,
   DeletedAt,
+  DefaultScope,
 } from 'sequelize-typescript';
 
+@DefaultScope(() => ({
+  attributes: ['id', 'fileName', 'name', 'content', 'createdAt'],
+}))
 @Table({
   tableName: 'signature',
   freezeTableName: true,

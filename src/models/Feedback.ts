@@ -9,8 +9,12 @@ import {
   CreatedAt,
   UpdatedAt,
   DeletedAt,
+  DefaultScope,
 } from 'sequelize-typescript';
 
+@DefaultScope(() => ({
+  attributes: ['id', 'userId', 'email', 'content', 'createdAt'],
+}))
 @Table({
   tableName: 'feedback',
   freezeTableName: true,

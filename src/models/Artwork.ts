@@ -9,9 +9,14 @@ import {
   DeletedAt,
   ForeignKey,
   BelongsTo,
+  DefaultScope,
 } from 'sequelize-typescript';
 
 import { Artist } from './Artist';
+
+@DefaultScope(() => ({
+  attributes: ['id', 'fileName', 'artistId'],
+}))
 @Table({
   tableName: 'artwork',
   freezeTableName: true,

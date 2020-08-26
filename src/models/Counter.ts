@@ -6,8 +6,12 @@ import {
   CreatedAt,
   UpdatedAt,
   DeletedAt,
+  DefaultScope,
 } from 'sequelize-typescript';
 
+@DefaultScope(() => ({
+  attributes: ['id', 'userId', 'path', 'createdAt'],
+}))
 @Table({
   tableName: 'counter',
   freezeTableName: true,
