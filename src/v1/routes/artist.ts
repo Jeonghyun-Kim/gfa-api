@@ -11,10 +11,12 @@ import { HTTP_CODE, DB_CODE, THUMBNAIL_SIZE } from '../../defines';
 import { uploadS3 } from '../utils/common';
 import { convertImage } from '../utils/image';
 
+// import * as fileInfo from './filenames.json';
+
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
-    fileSize: 50 * 1024 * 1024,
+    fileSize: 100 * 1024 * 1024,
   },
 });
 
@@ -325,6 +327,49 @@ router.post(
       });
 
       res.json({ error: 0 });
+    } catch (err) {
+      next(err);
+    }
+  },
+);
+
+router.post(
+  '/bulk',
+  upload.array('repImages'),
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const inputFiles = req.files as Express.Multer.File[];
+      let counter = 0;
+      await new Promise((resolve) => {
+        inputFiles.forEach(async (file) => {
+          const thumbFileName = `${sha256(uuid.v4())}.jpg`;
+          const artistId = Number(file.originalname.split('_')[0]);
+          const sharpImage = convertImage(sharp(file.buffer), 40, {
+            width: 300,
+            height: 300,
+          });
+          if (isProduction) {
+            sharpImage.toBuffer().then((data) => {
+              uploadS3(process.env.AWS_BUCKET!, `thumb/${thumbFileName}`, data);
+            });
+          } else {
+            sharpImage.toFile(`./public/thumb/${thumbFileName}`);
+          }
+          await Artist.create({
+            id: artistId,
+            thumbFileName,
+          });
+          counter = counter + 1;
+          if (counter === inputFiles.length) resolve();
+        });
+      });
+
+      const artists = await Artist.findAll({});
+
+      res.json({
+        artists,
+        error: 0,
+      });
     } catch (err) {
       next(err);
     }
