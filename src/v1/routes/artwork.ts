@@ -123,6 +123,10 @@ router.put(
     const landFile = req.files['landscape'][0] as Express.Multer.File;
     const portFile = req.files['portrait'][0] as Express.Multer.File;
 
+    if (!landFile || !portFile)
+      return res
+        .status(HTTP_CODE.BAD_REQUEST)
+        .json({ error: DB_CODE.FILE_EMPTY });
     const { artistId } = req.body;
 
     if (!artistId)
