@@ -66,7 +66,7 @@ router.post(
             artistId,
           });
           counter = counter + 1;
-          if (counter === inputFIles.length) resolve();
+          if (counter >= inputFIles.length) resolve();
         });
       });
 

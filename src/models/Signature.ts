@@ -35,7 +35,7 @@ export class Signature extends Model<Signature> {
   @Column
   name?: string;
 
-  @Length({ min: 3, max: 500 })
+  @Length({ max: 500 })
   @Column(DataType.TEXT)
   content?: string;
 
