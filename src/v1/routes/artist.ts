@@ -371,50 +371,6 @@ router.post(
   },
 );
 
-router.post(
-  '/crop',
-  upload.single('original'),
-  async (req: Request, res: Response, next: NextFunction) => {
-    const inputFile = req.file;
-    if (!inputFile)
-      return res
-        .status(HTTP_CODE.BAD_REQUEST)
-        .json({ error: DB_CODE.FILE_EMPTY });
-    try {
-      const sharpImage = sharp(req.file.buffer).clone();
-      sharpImage
-        .extract({
-          left: 915,
-          top: 0,
-          width: 730,
-          height: 1460,
-        })
-        .jpeg({
-          chromaSubsampling: '4:4:4',
-          quality: 40,
-        })
-        .toFile(`./public/tmp/port/${inputFile.originalname}`);
-
-      sharpImage
-        .extract({
-          left: 0,
-          top: 146,
-          width: 2560,
-          height: 1022,
-        })
-        .jpeg({
-          chromaSubsampling: '4:4:4',
-          quality: 40,
-        })
-        .toFile(`./public/tmp/land/${inputFile.originalname}`);
-
-      res.json({ error: 0 });
-    } catch (err) {
-      next(err);
-    }
-  },
-);
-
 router.put(
   '/crop/bulk',
   upload.array('renderedImages'),
