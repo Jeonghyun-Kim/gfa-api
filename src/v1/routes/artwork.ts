@@ -116,6 +116,88 @@ router.post(
   },
 );
 
+router.put(
+  '/',
+  uploadArtwork,
+  async (req: Request, res: Response, next: NextFunction) => {
+    const landFile = req.files['landscape'][0] as Express.Multer.File;
+    const portFile = req.files['portrait'][0] as Express.Multer.File;
+
+    const { artistId } = req.body;
+
+    if (!artistId)
+      return res
+        .status(HTTP_CODE.BAD_REQUEST)
+        .json({ error: DB_CODE.CHECK_REQUEST });
+
+    try {
+      const artwork = await Artwork.findOne({ where: { artistId } });
+
+      if (!artwork)
+        return res
+          .status(HTTP_CODE.BAD_REQUEST)
+          .json({ error: DB_CODE.NO_SUCH_ARTWORK });
+
+      const landscapeFileName = landFile
+        ? artwork.landscapeFileName ?? `${sha256(uuid.v4())}.jpg`
+        : undefined;
+
+      if (landscapeFileName) {
+        await new Promise((resolve) => {
+          const sharpImage = sharp(landFile.buffer);
+          if (isProduction) {
+            convertImage(sharpImage)
+              .toBuffer()
+              .then(async (data) => {
+                await uploadS3(
+                  process.env.AWS_BUCKET!,
+                  landscapeFileName,
+                  data,
+                );
+                resolve();
+              });
+          } else {
+            convertImage(sharpImage)
+              .toFile(`./public/rendered/${landscapeFileName}`)
+              .then(() => resolve());
+          }
+        });
+      }
+
+      const portraitFileName = portFile
+        ? artwork.portraitFileName ?? `${sha256(uuid.v4())}.jpg`
+        : undefined;
+
+      if (portraitFileName) {
+        await new Promise((resolve) => {
+          const sharpImage = sharp(portFile.buffer);
+          if (isProduction) {
+            convertImage(sharpImage)
+              .toBuffer()
+              .then(async (data) => {
+                await uploadS3(process.env.AWS_BUCKET!, portraitFileName, data);
+                resolve();
+              });
+          } else {
+            convertImage(sharpImage)
+              .toFile(`./public/rendered/${portraitFileName}`)
+              .then(() => resolve());
+          }
+        });
+      }
+
+      await artwork.update({
+        landscapeFileName,
+        portraitFileName,
+      });
+
+      res.json({ error: 0 });
+    } catch (err) {
+      next(err);
+    }
+  },
+);
+
 router.post(
   '/hit/:artistId',
   async (req: Request, res: Response, next: NextFunction) => {
