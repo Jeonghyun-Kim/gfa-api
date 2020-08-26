@@ -40,6 +40,13 @@ router.post(
   '/',
   uploadArtwork,
   async (req: Request, res: Response, next: NextFunction) => {
+    const { artistId } = req.body;
+
+    if (!artistId)
+      return res
+        .status(HTTP_CODE.BAD_REQUEST)
+        .json({ error: DB_CODE.CHECK_REQUEST });
+
     const repFile = req.files['repImage'][0] as Express.Multer.File;
     const landFile = req.files['landscape'][0] as Express.Multer.File;
     const portFile = req.files['portrait'][0] as Express.Multer.File;
@@ -53,13 +60,6 @@ router.post(
       return res
         .status(HTTP_CODE.BAD_REQUEST)
         .json({ error: DB_CODE.RENDERED_FILE_EMPTY });
-
-    const { artistId } = req.body;
-
-    if (!artistId)
-      return res
-        .status(HTTP_CODE.BAD_REQUEST)
-        .json({ error: DB_CODE.CHECK_REQUEST });
 
     try {
       const exArtist = await Artist.findOne({ where: { id: artistId } });
@@ -163,6 +163,13 @@ router.put(
   '/',
   uploadArtwork,
   async (req: Request, res: Response, next: NextFunction) => {
+    const { artistId } = req.body;
+
+    if (!artistId)
+      return res
+        .status(HTTP_CODE.BAD_REQUEST)
+        .json({ error: DB_CODE.CHECK_REQUEST });
+
     const repFile = req.files['repImage'][0] as Express.Multer.File;
     const landFile = req.files['landscape'][0] as Express.Multer.File;
     const portFile = req.files['portrait'][0] as Express.Multer.File;
@@ -171,13 +178,6 @@ router.put(
       return res
         .status(HTTP_CODE.BAD_REQUEST)
         .json({ error: DB_CODE.FILE_EMPTY });
-
-    const { artistId } = req.body;
-
-    if (!artistId)
-      return res
-        .status(HTTP_CODE.BAD_REQUEST)
-        .json({ error: DB_CODE.CHECK_REQUEST });
 
     try {
       const artist = await Artist.findOne({ where: { id: artistId } });

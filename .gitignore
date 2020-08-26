@@ -1,7 +1,11 @@
 node_modules
-public
+public/*
+!public/artworks
 build
 .env
 package-lock.json
 .DS_Store
 logs
+
+filenames.json
+
