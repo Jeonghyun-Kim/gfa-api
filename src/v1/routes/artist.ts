@@ -62,6 +62,13 @@ router.post(
         .json({ error: DB_CODE.CHECK_REQUEST });
 
     try {
+      const exArtist = await Artist.findOne({ where: { id: artistId } });
+
+      if (exArtist)
+        return res
+          .status(HTTP_CODE.BAD_REQUEST)
+          .json({ error: DB_CODE.ARTIST_ALREADY_EXISTS });
+
       const thumbFileName = `${sha256(uuid.v4())}.jpg`;
 
       await new Promise((resolve) => {

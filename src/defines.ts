@@ -13,6 +13,7 @@ export const DB_CODE = {
   REP_FILE_EMPTY: 7,
   RENDERED_FILE_EMPTY: 8,
   NO_SUCH_ARTIST: 11,
+  ARTIST_ALREADY_EXISTS: 12,
 };
 
 export const HTTP_CODE = {
