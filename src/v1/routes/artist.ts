@@ -106,7 +106,7 @@ router.post(
       await new Promise((resolve) => {
         const sharpImage = sharp(landFile.buffer);
         if (isProduction) {
-          convertImage(sharpImage)
+          convertImage(sharpImage, 80)
             .toBuffer()
             .then(async (data) => {
               await uploadS3(
@@ -117,7 +117,7 @@ router.post(
               resolve();
             });
         } else {
-          convertImage(sharpImage)
+          convertImage(sharpImage, 80)
             .toFile(`./public/rendered/${landscapeFileName}`)
             .then(() => resolve());
         }
@@ -128,7 +128,7 @@ router.post(
       await new Promise((resolve) => {
         const sharpImage = sharp(portFile.buffer);
         if (isProduction) {
-          convertImage(sharpImage)
+          convertImage(sharpImage, 80)
             .toBuffer()
             .then(async (data) => {
               await uploadS3(
@@ -139,7 +139,7 @@ router.post(
               resolve();
             });
         } else {
-          convertImage(sharpImage)
+          convertImage(sharpImage, 80)
             .toFile(`./public/rendered/${portraitFileName}`)
             .then(() => resolve());
         }
@@ -230,7 +230,7 @@ router.put(
         await new Promise((resolve) => {
           const sharpImage = sharp(landFile.buffer);
           if (isProduction) {
-            convertImage(sharpImage)
+            convertImage(sharpImage, 80)
               .toBuffer()
               .then(async (data) => {
                 await uploadS3(
@@ -241,7 +241,7 @@ router.put(
                 resolve();
               });
           } else {
-            convertImage(sharpImage)
+            convertImage(sharpImage, 80)
               .toFile(`./public/rendered/${landscapeFileName}`)
               .then(() => resolve());
           }
@@ -256,7 +256,7 @@ router.put(
         await new Promise((resolve) => {
           const sharpImage = sharp(portFile.buffer);
           if (isProduction) {
-            convertImage(sharpImage)
+            convertImage(sharpImage, 80)
               .toBuffer()
               .then(async (data) => {
                 await uploadS3(
@@ -267,7 +267,7 @@ router.put(
                 resolve();
               });
           } else {
-            convertImage(sharpImage)
+            convertImage(sharpImage, 80)
               .toFile(`./public/rendered/${portraitFileName}`)
               .then(() => resolve());
           }
@@ -391,11 +391,11 @@ router.put(
           const sharpLandscape = sharpImage
             .clone()
             .extract({ left: 0, top: 146, width: 2560, height: 1022 })
-            .jpeg({ chromaSubsampling: '4:4:4', quality: 40 });
+            .jpeg({ chromaSubsampling: '4:4:4', quality: 80 });
           const sharpPortrait = sharpImage
             .clone()
             .extract({ left: 915, top: 0, width: 730, height: 1460 })
-            .jpeg({ chromaSubsampling: '4:4:4', quality: 40 });
+            .jpeg({ chromaSubsampling: '4:4:4', quality: 80 });
 
           if (isProduction) {
             sharpLandscape.toBuffer().then((data) => {

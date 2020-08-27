@@ -51,7 +51,7 @@ router.post(
             })
             .jpeg({
               chromaSubsampling: '4:4:4',
-              quality: 40,
+              quality: 80,
             });
           if (isProduction) {
             sharpImage.toBuffer().then((data) => {

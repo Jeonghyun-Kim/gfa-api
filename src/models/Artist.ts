@@ -18,6 +18,7 @@ import { Artwork } from './Artwork';
 @DefaultScope(() => ({
   attributes: [
     'id',
+    'artistName',
     'thumbFileName',
     'landscapeFileName',
     'portraitFileName',
@@ -43,6 +44,9 @@ export class Artist extends Model<Artist> {
   @AllowNull(false)
   @Column
   id!: number;
+
+  @Column
+  artistName?: string;
 
   @Length({ max: 70 })
   @Column
