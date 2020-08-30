@@ -44,7 +44,10 @@ app.use(
     secret: process.env.COOKIE_SECRET!,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: isProduction },
+    cookie: {
+      secure: true,
+      sameSite: isProduction ? 'lax' : 'none',
+    },
   }),
 );
 
