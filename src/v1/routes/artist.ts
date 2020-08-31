@@ -170,9 +170,15 @@ router.put(
         .status(HTTP_CODE.BAD_REQUEST)
         .json({ error: DB_CODE.CHECK_REQUEST });
 
-    const repFile = req.files['repImage'][0] as Express.Multer.File;
-    const landFile = req.files['landscape'][0] as Express.Multer.File;
-    const portFile = req.files['portrait'][0] as Express.Multer.File;
+    const repFile = req.files['repImage']
+      ? (req.files['repImage'][0] as Express.Multer.File)
+      : undefined;
+    const landFile = req.files['landscape']
+      ? (req.files['landscape'][0] as Express.Multer.File)
+      : undefined;
+    const portFile = req.files['portrait']
+      ? (req.files['portrait'][0] as Express.Multer.File)
+      : undefined;
 
     if (!repFile && !landFile && !portFile)
       return res
@@ -193,7 +199,7 @@ router.put(
 
       if (thumbFileName) {
         await new Promise((resolve) => {
-          const sharpImage = sharp(repFile.buffer)
+          const sharpImage = sharp(repFile && repFile.buffer)
             .clone()
             .resize({
               fit: 'cover',
@@ -228,7 +234,7 @@ router.put(
 
       if (landscapeFileName) {
         await new Promise((resolve) => {
-          const sharpImage = sharp(landFile.buffer);
+          const sharpImage = sharp(landFile && landFile.buffer);
           if (isProduction) {
             convertImage(sharpImage, 80)
               .toBuffer()
@@ -254,7 +260,7 @@ router.put(
 
       if (portraitFileName) {
         await new Promise((resolve) => {
-          const sharpImage = sharp(portFile.buffer);
+          const sharpImage = sharp(portFile && portFile.buffer);
           if (isProduction) {
             convertImage(sharpImage, 80)
               .toBuffer()
