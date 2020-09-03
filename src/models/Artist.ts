@@ -5,6 +5,7 @@ import {
   AllowNull,
   Length,
   Default,
+  DataType,
   CreatedAt,
   UpdatedAt,
   DeletedAt,
@@ -19,6 +20,8 @@ import { Artwork } from './Artwork';
   attributes: [
     'id',
     'artistName',
+    'detail',
+    'profileFileName',
     'thumbFileName',
     'landscapeFileName',
     'portraitFileName',
@@ -47,6 +50,13 @@ export class Artist extends Model<Artist> {
 
   @Column
   artistName?: string;
+
+  @Column(DataType.TEXT)
+  detail?: string;
+
+  @Length({ max: 70 })
+  @Column
+  profileFileName!: string;
 
   @Length({ max: 70 })
   @Column

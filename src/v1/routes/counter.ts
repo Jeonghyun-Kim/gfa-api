@@ -1,5 +1,4 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import { Sequelize } from 'sequelize';
 
 import { Counter } from '../../models/Counter';
 
@@ -9,11 +8,12 @@ const router = Router();
 
 router.get('/', async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const counts = await Counter.findAll({
-      attributes: [[Sequelize.literal('DISTINCT userId'), 'userId']],
+    const counts = await Counter.count({
+      distinct: true,
+      col: 'userId',
     });
 
-    res.json({ counts: counts.length, error: 0 });
+    res.json({ counts, error: 0 });
   } catch (err) {
     next(err);
   }

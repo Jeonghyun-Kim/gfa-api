@@ -348,10 +348,20 @@ router.post(
         inputFiles.forEach(async (file) => {
           const thumbFileName = `${sha256(uuid.v4())}.jpg`;
           const artistId = Number(file.originalname.split('_')[0]);
-          const sharpImage = convertImage(sharp(file.buffer), 40, {
-            width: 300,
-            height: 300,
-          });
+          // const sharpImage = convertImage(sharp(file.buffer), 40, {
+          //   width: 300,
+          //   height: 300,
+          // });
+          const sharpImage = sharp(file.buffer)
+            .clone()
+            .resize({
+              width: THUMBNAIL_SIZE,
+              height: THUMBNAIL_SIZE,
+            })
+            .jpeg({
+              chromaSubsampling: '4:4:4',
+              quality: 40,
+            });
           if (isProduction) {
             sharpImage.toBuffer().then((data) => {
               uploadS3(process.env.AWS_BUCKET!, `thumb/${thumbFileName}`, data);
@@ -361,6 +371,61 @@ router.post(
           }
           await Artist.create({
             id: artistId,
+            thumbFileName,
+          });
+          counter = counter + 1;
+          if (counter >= inputFiles.length) resolve();
+        });
+      });
+
+      const artists = await Artist.findAll({});
+
+      res.json({ artists, error: 0 });
+    } catch (err) {
+      next(err);
+    }
+  },
+);
+
+router.put(
+  '/bulk',
+  upload.array('repImages'),
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const inputFiles = req.files as Express.Multer.File[];
+      let counter = 0;
+      await new Promise((resolve) => {
+        inputFiles.forEach(async (file) => {
+          const thumbFileName = `${sha256(uuid.v4())}.jpg`;
+          const artistId = Number(file.originalname.split('_')[0]);
+          const artist = await Artist.findOne({ where: { id: artistId } });
+          if (!artist)
+            return res
+              .status(HTTP_CODE.BAD_REQUEST)
+              .json({ error: DB_CODE.NO_SUCH_ARTIST });
+          // const sharpImage = convertImage(sharp(file.buffer), 40, {
+          //   width: 300,
+          //   height: 300,
+          // });
+          const sharpImage = sharp(file.buffer)
+            .clone()
+            .resize({
+              width: THUMBNAIL_SIZE,
+              height: THUMBNAIL_SIZE,
+            })
+            .jpeg({
+              chromaSubsampling: '4:4:4',
+              quality: 40,
+            });
+          if (isProduction) {
+            sharpImage.toBuffer().then((data) => {
+              uploadS3(process.env.AWS_BUCKET!, `thumb/${thumbFileName}`, data);
+            });
+          } else {
+            sharpImage.toFile(`./public/thumb/${thumbFileName}`);
+          }
+
+          await artist.update({
             thumbFileName,
           });
           counter = counter + 1;
@@ -432,6 +497,77 @@ router.put(
       const artists = await Artist.findAll({});
 
       res.json({ artists, error: 0 });
+    } catch (err) {
+      next(err);
+    }
+  },
+);
+
+router.put(
+  '/profile/bulk',
+  upload.array('profile'),
+  async (req: Request, res: Response, next: NextFunction) => {
+    const inputFiles = req.files as Express.Multer.File[];
+    try {
+      await new Promise((resolve) => {
+        let counter = 0;
+        inputFiles.forEach(async (file) => {
+          const artistId = Number(file.originalname.substring(0, 2));
+          const artist = await Artist.findOne({ where: { id: artistId } });
+          if (!artist) throw new Error('FILENAME ERROR');
+          const profileFileName = `${sha256(uuid.v4())}.jpg`;
+          const sharpImage = sharp(file.buffer)
+            .clone()
+            .resize({
+              width: 448,
+              height: 560,
+              fit: 'cover',
+              withoutEnlargement: true,
+            })
+            .jpeg({ chromaSubsampling: '4:4:4', quality: 80 });
+
+          if (isProduction) {
+            sharpImage.toBuffer().then((data) => {
+              uploadS3(
+                process.env.AWS_BUCKET!,
+                `profile/${profileFileName}`,
+                data,
+              );
+            });
+          } else {
+            sharpImage.toFile(`./public/profile/${profileFileName}`);
+          }
+
+          await artist.update({ profileFileName });
+          counter += 1;
+          if (counter >= inputFiles.length) resolve();
+        });
+      });
+      const artists = await Artist.findAll();
+
+      res.json({ artists, error: 0 });
+    } catch (err) {
+      next(err);
+    }
+  },
+);
+
+router.put(
+  '/detail',
+  async (req: Request, res: Response, next: NextFunction) => {
+    const { artistId, content } = req.body;
+    try {
+      let artist = await Artist.findOne({ where: { id: artistId } });
+      if (!artist)
+        return res
+          .status(HTTP_CODE.BAD_REQUEST)
+          .json({ error: DB_CODE.NO_SUCH_ARTIST });
+
+      artist = await artist.update({
+        detail: content,
+      });
+
+      res.json({ artist, error: 0 });
     } catch (err) {
       next(err);
     }
