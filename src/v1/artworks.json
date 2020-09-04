@@ -1,0 +1,1522 @@
+[
+  {
+    "artworkId": 1,
+    "artistId": 1,
+    "artist": "전뢰진",
+    "title": "새봄맞이",
+    "size": "unknown",
+    "material": "unknown"
+  },
+  {
+    "artworkId": 2,
+    "artistId": 1,
+    "artist": "전뢰진",
+    "title": "모자상",
+    "size": "unknown",
+    "material": "unknown"
+  },
+  {
+    "artworkId": 3,
+    "artistId": 1,
+    "artist": "전뢰진",
+    "title": "Family",
+    "size": "unknown",
+    "material": "unknown"
+  },
+  {
+    "artworkId": 4,
+    "artistId": 2,
+    "artist": "송진세",
+    "title": "봄비 내리는 창",
+    "size": "45.5 x 53 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 5,
+    "artistId": 2,
+    "artist": "송진세",
+    "title": "노상의 집적",
+    "size": "53 x 45.5 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 6,
+    "artistId": 2,
+    "artist": "송진세",
+    "title": "창밖의 월출산",
+    "size": "53 x 45.5 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 7,
+    "artistId": 3,
+    "artist": "홍사구",
+    "title": "사인암",
+    "size": "27 x 46 (cm)",
+    "material": "순지, 수묵담채"
+  },
+  {
+    "artworkId": 8,
+    "artistId": 3,
+    "artist": "홍사구",
+    "title": "소금강",
+    "size": "46 x 27 (cm)",
+    "material": "순지, 수묵담채"
+  },
+  {
+    "artworkId": 9,
+    "artistId": 3,
+    "artist": "홍사구",
+    "title": "주전골",
+    "size": "46 x 27 (cm)",
+    "material": "순지, 수묵담채"
+  },
+  {
+    "artworkId": 10,
+    "artistId": 4,
+    "artist": "두시영",
+    "title": "월영아리랑",
+    "size": "211 x 161.5 (cm)",
+    "material": "Mixed media on canvas"
+  },
+  {
+    "artworkId": 11,
+    "artistId": 4,
+    "artist": "두시영",
+    "title": "korea 아리랑",
+    "size": "116.7 x 91 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 12,
+    "artistId": 4,
+    "artist": "두시영",
+    "title": "모란아리랑",
+    "size": "52.5 x 54 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 13,
+    "artistId": 5,
+    "artist": "김영순",
+    "title": "동막리의겨울바다",
+    "size": "88 x 210 (cm)",
+    "material": "청묵담채"
+  },
+  {
+    "artworkId": 14,
+    "artistId": 5,
+    "artist": "김영순",
+    "title": "두물머리에서다",
+    "size": "100 x 120 (cm)",
+    "material": "청묵담채"
+  },
+  {
+    "artworkId": 15,
+    "artistId": 5,
+    "artist": "김영순",
+    "title": "향설",
+    "size": "62 x 94 (cm)",
+    "material": "청묵담채"
+  },
+  {
+    "artworkId": 16,
+    "artistId": 6,
+    "artist": "이희자",
+    "title": "백호(白虎) - 순산",
+    "size": "162.2 x 130 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 17,
+    "artistId": 6,
+    "artist": "이희자",
+    "title": "용(龍)-순산",
+    "size": "53 x 45.5 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 18,
+    "artistId": 6,
+    "artist": "이희자",
+    "title": "홀인원 - 다산",
+    "size": "240 x 580 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 19,
+    "artistId": 7,
+    "artist": "지성곤",
+    "title": "빛",
+    "size": "53 x 41 (cm)",
+    "material": "Oil on canvas"
+  },
+  {
+    "artworkId": 20,
+    "artistId": 7,
+    "artist": "지성곤",
+    "title": "성소",
+    "size": "53 x 45 (cm)",
+    "material": "Oil on canvas"
+  },
+  {
+    "artworkId": 21,
+    "artistId": 7,
+    "artist": "지성곤",
+    "title": "풍경",
+    "size": "16 x 22.5 (cm)",
+    "material": "Oil on canvas"
+  },
+  {
+    "artworkId": 22,
+    "artistId": 8,
+    "artist": "서홍원",
+    "title": "봉황",
+    "size": "45.5 x 45.5 (cm)",
+    "material": "한지에 석채"
+  },
+  {
+    "artworkId": 23,
+    "artistId": 8,
+    "artist": "서홍원",
+    "title": "봉황 돌아오다",
+    "size": "unknown",
+    "material": "한지에 석채"
+  },
+  {
+    "artworkId": 24,
+    "artistId": 8,
+    "artist": "서홍원",
+    "title": "봉황 돌아오다",
+    "size": "unknown",
+    "material": "한지에 석채"
+  },
+  {
+    "artworkId": 25,
+    "artistId": 9,
+    "artist": "성낙주",
+    "title": "contrast",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "Mixed media on canvas"
+  },
+  {
+    "artworkId": 26,
+    "artistId": 9,
+    "artist": "성낙주",
+    "title": "contrast",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "Mixed media on canvas"
+  },
+  {
+    "artworkId": 27,
+    "artistId": 9,
+    "artist": "성낙주",
+    "title": "contrast",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "Mixed media on canvas"
+  },
+  {
+    "artworkId": 28,
+    "artistId": 10,
+    "artist": "임옥수",
+    "title": "월남참전기념비",
+    "size": "2000 x 2000 x 1700 (cm)",
+    "material": "화강암, 브론즈, 스텐레스스틸"
+  },
+  {
+    "artworkId": 29,
+    "artistId": 10,
+    "artist": "임옥수",
+    "title": "진화의 꽃",
+    "size": "50 x 40 x 170 (cm)",
+    "material": "적동, 황동"
+  },
+  {
+    "artworkId": 30,
+    "artistId": 10,
+    "artist": "임옥수",
+    "title": "진화의 꽃",
+    "size": "35 x 30 x 40 (cm)",
+    "material": "적동, 황동"
+  },
+  {
+    "artworkId": 31,
+    "artistId": 11,
+    "artist": "김철성",
+    "title": "Decorum",
+    "size": "72.7 x 72.7 (cm)",
+    "material": "Oil on canvas"
+  },
+  {
+    "artworkId": 32,
+    "artistId": 11,
+    "artist": "김철성",
+    "title": "Decorum",
+    "size": "130 x 130 (cm)",
+    "material": "Oil on canvas"
+  },
+  {
+    "artworkId": 33,
+    "artistId": 11,
+    "artist": "김철성",
+    "title": "Decorum",
+    "size": "130 x 130 (cm)",
+    "material": "Oil on canvas"
+  },
+  {
+    "artworkId": 34,
+    "artistId": 12,
+    "artist": "강명숙",
+    "title": "자작나무가을풍경",
+    "size": "45.5 x 38 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 35,
+    "artistId": 12,
+    "artist": "강명숙",
+    "title": "하계의 속삭임",
+    "size": "45.5 x 38 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 36,
+    "artistId": 12,
+    "artist": "강명숙",
+    "title": "행복의 돌고래",
+    "size": "31.8 x 41 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 37,
+    "artistId": 13,
+    "artist": "강미숙",
+    "title": "희로애락",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "캔버스에 아크릴"
+  },
+  {
+    "artworkId": 38,
+    "artistId": 13,
+    "artist": "강미숙",
+    "title": "희로애락",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "캔버스에 아크릴"
+  },
+  {
+    "artworkId": 39,
+    "artistId": 13,
+    "artist": "강미숙",
+    "title": "희로애락",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "캔버스에 아크릴"
+  },
+  {
+    "artworkId": 40,
+    "artistId": 14,
+    "artist": "강미영",
+    "title": "Secret flower(ginili)",
+    "size": "39 x 54 (cm)",
+    "material": "유포지, 알코올잉크, 마카"
+  },
+  {
+    "artworkId": 41,
+    "artistId": 14,
+    "artist": "강미영",
+    "title": "Secret flowers",
+    "size": "54 x 39 (cm)",
+    "material": "유포지, 알코올잉크, 마카"
+  },
+  {
+    "artworkId": 42,
+    "artistId": 14,
+    "artist": "강미영",
+    "title": "Secret Sandswirl",
+    "size": "39 x 54 (cm)",
+    "material": "유포지, 알코올잉크, 마카"
+  },
+  {
+    "artworkId": 43,
+    "artistId": 15,
+    "artist": "강의숙",
+    "title": "양귀비와 도마뱀",
+    "size": "46 x 32 (cm)",
+    "material": "순지에 채색회"
+  },
+  {
+    "artworkId": 44,
+    "artistId": 15,
+    "artist": "강의숙",
+    "title": "오이와 개구리",
+    "size": "46 x 32 (cm)",
+    "material": "순지에 채색회"
+  },
+  {
+    "artworkId": 45,
+    "artistId": 15,
+    "artist": "강의숙",
+    "title": "위안",
+    "size": "82 x 130 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 46,
+    "artistId": 16,
+    "artist": "권기순",
+    "title": "가을",
+    "size": "45.5 x 53 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 47,
+    "artistId": 16,
+    "artist": "권기순",
+    "title": "아름다운 산하",
+    "size": "31.8 x 41 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 48,
+    "artistId": 16,
+    "artist": "권기순",
+    "title": "가을 계곡",
+    "size": "45.5 x 53 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 49,
+    "artistId": 17,
+    "artist": "권효진",
+    "title": "regression - Sea Anemone 1",
+    "size": "45.5 x 53 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 50,
+    "artistId": 17,
+    "artist": "권효진",
+    "title": "regression - Sea Anemone 2",
+    "size": "45.5 x 53 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 51,
+    "artistId": 17,
+    "artist": "권효진",
+    "title": "regression - Sea Anemone 3",
+    "size": "45.5 x 53 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 52,
+    "artistId": 18,
+    "artist": "금광복",
+    "title": "까치와 호랑이",
+    "size": "45.5 x 53 (cm)",
+    "material": "장지에 수간분채"
+  },
+  {
+    "artworkId": 53,
+    "artistId": 18,
+    "artist": "금광복",
+    "title": "염원",
+    "size": "116.7 x 91 (cm)",
+    "material": "장지에 수간분채"
+  },
+  {
+    "artworkId": 54,
+    "artistId": 18,
+    "artist": "금광복",
+    "title": "신화",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "요철한지에 수간채색"
+  },
+  {
+    "artworkId": 55,
+    "artistId": 19,
+    "artist": "김경순",
+    "title": "사랑",
+    "size": "53 x 45.5 (cm)",
+    "material": "먹, 물감, 아교, 동전"
+  },
+  {
+    "artworkId": 56,
+    "artistId": 19,
+    "artist": "김경순",
+    "title": "믿음",
+    "size": "53 x 45.5 (cm)",
+    "material": "먹, 물감, 아교, 동전"
+  },
+  {
+    "artworkId": 57,
+    "artistId": 19,
+    "artist": "김경순",
+    "title": "소망",
+    "size": "53 x 45.5 (cm)",
+    "material": "먹, 물감, 아교, 동전"
+  },
+  {
+    "artworkId": 58,
+    "artistId": 20,
+    "artist": "김만수",
+    "title": "그리운 그곳",
+    "size": "50 x 73 (cm)",
+    "material": "유화"
+  },
+  {
+    "artworkId": 59,
+    "artistId": 20,
+    "artist": "김만수",
+    "title": "그곳에 가고 싶다",
+    "size": "52 x 74 (cm)",
+    "material": "수채화"
+  },
+  {
+    "artworkId": 60,
+    "artistId": 20,
+    "artist": "김만수",
+    "title": "소나무",
+    "size": "61 x 91 (cm)",
+    "material": "수채화"
+  },
+  {
+    "artworkId": 61,
+    "artistId": 21,
+    "artist": "김성옥",
+    "title": "삶의 기억들",
+    "size": "91 x 72.7 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 62,
+    "artistId": 21,
+    "artist": "김성옥",
+    "title": "세월의 窓",
+    "size": "60.6 x 72.7 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 63,
+    "artistId": 21,
+    "artist": "김성옥",
+    "title": "세월 1",
+    "size": "53 x 45.5 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 64,
+    "artistId": 22,
+    "artist": "김정숙",
+    "title": "양류수월관음",
+    "size": "150 x 78 (cm)",
+    "material": "순지에 분채"
+  },
+  {
+    "artworkId": 65,
+    "artistId": 22,
+    "artist": "김정숙",
+    "title": "미인과 모란",
+    "size": "140 x 76 (cm)",
+    "material": "순지에 분채"
+  },
+  {
+    "artworkId": 66,
+    "artistId": 22,
+    "artist": "김정숙",
+    "title": "백의관음",
+    "size": "110 x 70 (cm)",
+    "material": "순지에 분채"
+  },
+  {
+    "artworkId": 67,
+    "artistId": 23,
+    "artist": "김정임",
+    "title": "사찰",
+    "size": "35 x 45 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 68,
+    "artistId": 23,
+    "artist": "김정임",
+    "title": "석류",
+    "size": "35 x 45 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 69,
+    "artistId": 23,
+    "artist": "김정임",
+    "title": "설경",
+    "size": "35 x 45 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 70,
+    "artistId": 24,
+    "artist": "김현숙",
+    "title": "꼭지들",
+    "size": "90.9 x 72.7 (cm)",
+    "material": "acrylic on canvas, collage"
+  },
+  {
+    "artworkId": 71,
+    "artistId": 24,
+    "artist": "김현숙",
+    "title": "존재의 집",
+    "size": "84 x 55.5 (cm)",
+    "material": "닥지 위에 분채"
+  },
+  {
+    "artworkId": 72,
+    "artistId": 24,
+    "artist": "김현숙",
+    "title": "전위(前衛)",
+    "size": "51 x 35 (cm)",
+    "material": "닥지 위에 분채"
+  },
+  {
+    "artworkId": 73,
+    "artistId": 25,
+    "artist": "남행연",
+    "title": "먼길 떠나며",
+    "size": "130.3 x 162 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 74,
+    "artistId": 25,
+    "artist": "남행연",
+    "title": "여주강가에서",
+    "size": "72.7 x 91 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 75,
+    "artistId": 25,
+    "artist": "남행연",
+    "title": "서정리의 물안개",
+    "size": "31.8 x 41 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 76,
+    "artistId": 26,
+    "artist": "노혜경",
+    "title": "수련",
+    "size": "45.5 x 53 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 77,
+    "artistId": 26,
+    "artist": "노혜경",
+    "title": "순수",
+    "size": "45.5 x 53 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 78,
+    "artistId": 26,
+    "artist": "노혜경",
+    "title": "해바라기",
+    "size": "45.5 x 53 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 79,
+    "artistId": 27,
+    "artist": "도해심",
+    "title": "열정은 기적을 낳는다",
+    "size": "90 x 33 (cm)",
+    "material": "편백에 혼합재료"
+  },
+  {
+    "artworkId": 80,
+    "artistId": 27,
+    "artist": "도해심",
+    "title": "열정은 기적을 낳는다",
+    "size": "40 x 73 (cm)",
+    "material": "편백에 혼합재료"
+  },
+  {
+    "artworkId": 81,
+    "artistId": 27,
+    "artist": "도해심",
+    "title": "열정은 기적을 낳는다",
+    "size": "80 x 35 (cm)",
+    "material": "편백에 혼합재료"
+  },
+  {
+    "artworkId": 82,
+    "artistId": 28,
+    "artist": "민경숙",
+    "title": "꿈이 익어가는 시간",
+    "size": "38 x 145 (cm)",
+    "material": "한지에 분채"
+  },
+  {
+    "artworkId": 83,
+    "artistId": 28,
+    "artist": "민경숙",
+    "title": "나눔",
+    "size": "48 x 38 (cm)",
+    "material": "한지에 분채"
+  },
+  {
+    "artworkId": 84,
+    "artistId": 28,
+    "artist": "민경숙",
+    "title": "모두가 사랑이어라",
+    "size": "70 x 56 (cm)",
+    "material": "한지에 분채"
+  },
+  {
+    "artworkId": 85,
+    "artistId": 29,
+    "artist": "민병문",
+    "title": "산청의 외가",
+    "size": "80.3 x 100 (cm) (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 86,
+    "artistId": 29,
+    "artist": "민병문",
+    "title": "설악의 울산바위",
+    "size": "100 x 80.3 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 87,
+    "artistId": 30,
+    "artist": "박경순",
+    "title": "비천의 고요함",
+    "size": "41 x 53 (cm)",
+    "material": "acrylic on wooden pannel"
+  },
+  {
+    "artworkId": 88,
+    "artistId": 30,
+    "artist": "박경순",
+    "title": "비천의 속삭임",
+    "size": "53 x 41 (cm)",
+    "material": "acrylic on wooden pannel"
+  },
+  {
+    "artworkId": 89,
+    "artistId": 30,
+    "artist": "박경순",
+    "title": "비천 함께",
+    "size": "53 x 41 (cm)",
+    "material": "acrylic on wooden pannel"
+  },
+  {
+    "artworkId": 90,
+    "artistId": 31,
+    "artist": "박귀수",
+    "title": "황혼에 물든 황금빛 인생",
+    "size": "50 x 72.7 (cm)",
+    "material": "acrylic.mixed media on canvas"
+  },
+  {
+    "artworkId": 91,
+    "artistId": 31,
+    "artist": "박귀수",
+    "title": "백보리",
+    "size": "45.5 x 53 (cm)",
+    "material": "acrylic.mixed media on canvas"
+  },
+  {
+    "artworkId": 92,
+    "artistId": 31,
+    "artist": "박귀수",
+    "title": "별빛소나타",
+    "size": "45.5 x 53 (cm)",
+    "material": "acrylic.mixed media on canvas"
+  },
+  {
+    "artworkId": 93,
+    "artistId": 32,
+    "artist": "박장식",
+    "title": "사랑의 메아리",
+    "size": "34 x 41 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 94,
+    "artistId": 32,
+    "artist": "박장식",
+    "title": "간월암",
+    "size": "37 x 52 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 95,
+    "artistId": 32,
+    "artist": "박장식",
+    "title": "관악산",
+    "size": "46 x 53 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 96,
+    "artistId": 33,
+    "artist": "박정화",
+    "title": "Main end",
+    "size": "26 x 36 (cm)",
+    "material": "아르쉬지, 과슈"
+  },
+  {
+    "artworkId": 97,
+    "artistId": 33,
+    "artist": "박정화",
+    "title": "Main 1",
+    "size": "26 x 36 (cm)",
+    "material": "아르쉬지, 과슈"
+  },
+  {
+    "artworkId": 98,
+    "artistId": 33,
+    "artist": "박정화",
+    "title": "Main 2",
+    "size": "26 x 36 (cm)",
+    "material": "아르쉬지, 과슈"
+  },
+  {
+    "artworkId": 99,
+    "artistId": 34,
+    "artist": "박창수",
+    "title": "유달산소견",
+    "size": "110 x 185 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 100,
+    "artistId": 34,
+    "artist": "박창수",
+    "title": "관악산 연주암",
+    "size": "33 x 71 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 101,
+    "artistId": 34,
+    "artist": "박창수",
+    "title": "울둘목(진도)",
+    "size": "72.7 x 91 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 102,
+    "artistId": 35,
+    "artist": "서정화",
+    "title": "추억속으로1",
+    "size": "40 x 53 (cm)",
+    "material": "oil painting"
+  },
+  {
+    "artworkId": 103,
+    "artistId": 35,
+    "artist": "서정화",
+    "title": "추억속으로2",
+    "size": "32 x 44 (cm)",
+    "material": "oil painting"
+  },
+  {
+    "artworkId": 104,
+    "artistId": 35,
+    "artist": "서정화",
+    "title": "추억속으로3",
+    "size": "45 x 53 (cm)",
+    "material": "oil painting"
+  },
+  {
+    "artworkId": 105,
+    "artistId": 36,
+    "artist": "선문순",
+    "title": "여름날의 여정1",
+    "size": "45.5 x 53 (cm)",
+    "material": "mixed on canvas"
+  },
+  {
+    "artworkId": 106,
+    "artistId": 36,
+    "artist": "선문순",
+    "title": "여름날의 여정2",
+    "size": "53 x 72.7 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 107,
+    "artistId": 36,
+    "artist": "선문순",
+    "title": "봄날의 여정1",
+    "size": "53 x 45.5 (cm)",
+    "material": "Acrylic on canvas"
+  },
+  {
+    "artworkId": 108,
+    "artistId": 37,
+    "artist": "선학균",
+    "title": "역사-맥",
+    "size": "91 x 116.7 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 109,
+    "artistId": 37,
+    "artist": "선학균",
+    "title": "회고回顧",
+    "size": "116.7 x 91 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 110,
+    "artistId": 37,
+    "artist": "선학균",
+    "title": "풍어의 꿈",
+    "size": "91 x 116.7 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 111,
+    "artistId": 38,
+    "artist": "양혜언",
+    "title": "긴점박이올빼미 가족",
+    "size": "53 x 45.5 (cm)",
+    "material": "한지.석채.분채"
+  },
+  {
+    "artworkId": 112,
+    "artistId": 38,
+    "artist": "양혜언",
+    "title": "백조의 호수",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "한지.석채.분채"
+  },
+  {
+    "artworkId": 113,
+    "artistId": 38,
+    "artist": "양혜언",
+    "title": "수리부엉이",
+    "size": "45.5 x 38 (cm)",
+    "material": "한지.석채.분채"
+  },
+  {
+    "artworkId": 114,
+    "artistId": 39,
+    "artist": "엄길자",
+    "title": "생명의 노래-봄날Ｉ",
+    "size": "72.7 x 91 (cm)",
+    "material": "oil on canvas"
+  },
+  {
+    "artworkId": 115,
+    "artistId": 39,
+    "artist": "엄길자",
+    "title": "생명의 노래-봄날Ⅱ",
+    "size": "45.5 x 53 (cm)",
+    "material": "oil on canvas"
+  },
+  {
+    "artworkId": 116,
+    "artistId": 39,
+    "artist": "엄길자",
+    "title": "생명의 노래-봄날Ⅲ",
+    "size": "60.6 x 72.7 (cm)",
+    "material": "oil on canvas"
+  },
+  {
+    "artworkId": 117,
+    "artistId": 40,
+    "artist": "엄순복",
+    "title": "설경",
+    "size": "48 x 64 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 118,
+    "artistId": 40,
+    "artist": "엄순복",
+    "title": "영월선돌",
+    "size": "130 x 160 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 119,
+    "artistId": 40,
+    "artist": "엄순복",
+    "title": "청송",
+    "size": "35 x 50 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 120,
+    "artistId": 41,
+    "artist": "오용남",
+    "title": "가을축제",
+    "size": "45.5 x 33.3 (cm)",
+    "material": "수채"
+  },
+  {
+    "artworkId": 121,
+    "artistId": 41,
+    "artist": "오용남",
+    "title": "햇살좋은 어느오후",
+    "size": "33.3 x 45.5 (cm)",
+    "material": "수채"
+  },
+  {
+    "artworkId": 122,
+    "artistId": 41,
+    "artist": "오용남",
+    "title": "결실의 행복함",
+    "size": "31.8 x 41 (cm)",
+    "material": "수채"
+  },
+  {
+    "artworkId": 123,
+    "artistId": 42,
+    "artist": "오학연",
+    "title": "세월",
+    "size": "91 x 116.8 (cm)",
+    "material": "유화"
+  },
+  {
+    "artworkId": 124,
+    "artistId": 42,
+    "artist": "오학연",
+    "title": "강화의 봄",
+    "size": "50 x 65 (cm)",
+    "material": "유화"
+  },
+  {
+    "artworkId": 125,
+    "artistId": 42,
+    "artist": "오학연",
+    "title": "휴식",
+    "size": "40.9 x 60.6 (cm)",
+    "material": "유화"
+  },
+  {
+    "artworkId": 126,
+    "artistId": 43,
+    "artist": "원영례",
+    "title": "봄의 향기",
+    "size": "46 x 70 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 127,
+    "artistId": 43,
+    "artist": "원영례",
+    "title": "설악산",
+    "size": "60 x 80 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 128,
+    "artistId": 43,
+    "artist": "원영례",
+    "title": "연꽃마을",
+    "size": "64 x 88 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 129,
+    "artistId": 44,
+    "artist": "윤건섭",
+    "title": "개심사의 봄",
+    "size": "45 x 64 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 130,
+    "artistId": 44,
+    "artist": "윤건섭",
+    "title": "노송",
+    "size": "34 x 45 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 131,
+    "artistId": 44,
+    "artist": "윤건섭",
+    "title": "봄소식",
+    "size": "46 x 62 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 132,
+    "artistId": 45,
+    "artist": "윤옥희",
+    "title": "고요",
+    "size": "45.5 x 53 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 133,
+    "artistId": 45,
+    "artist": "윤옥희",
+    "title": "봄소식",
+    "size": "38 x 45.5 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 134,
+    "artistId": 45,
+    "artist": "윤옥희",
+    "title": "사인암 겨울",
+    "size": "27 x 35 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 135,
+    "artistId": 46,
+    "artist": "이길자",
+    "title": "모란전지",
+    "size": "69 x 154 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 136,
+    "artistId": 46,
+    "artist": "이길자",
+    "title": "모란",
+    "size": "44 x 32 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 137,
+    "artistId": 46,
+    "artist": "이길자",
+    "title": "목련(노을)",
+    "size": "35 x 72 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 138,
+    "artistId": 47,
+    "artist": "이명희",
+    "title": "까치와 호랑이",
+    "size": "80 x 50 (cm)",
+    "material": "순지에 분채"
+  },
+  {
+    "artworkId": 139,
+    "artistId": 47,
+    "artist": "이명희",
+    "title": "화조도",
+    "size": "75 x 45 (cm)",
+    "material": "순지에 분채"
+  },
+  {
+    "artworkId": 140,
+    "artistId": 47,
+    "artist": "이명희",
+    "title": "공작화조도",
+    "size": "75 x 45 (cm)",
+    "material": "순지에 분채"
+  },
+  {
+    "artworkId": 141,
+    "artistId": 48,
+    "artist": "이석민",
+    "title": "풍경, 나무 그리고 기억",
+    "size": "42 x 59.4 (cm)",
+    "material": "디지털 프린트"
+  },
+  {
+    "artworkId": 142,
+    "artistId": 48,
+    "artist": "이석민",
+    "title": "풍경, 나무 그리고 기억",
+    "size": "59.4 x 42 (cm)",
+    "material": "디지털 프린트"
+  },
+  {
+    "artworkId": 143,
+    "artistId": 48,
+    "artist": "이석민",
+    "title": "풍경, 나무 그리고 기억",
+    "size": "59.4 x 42 (cm)",
+    "material": "디지털 프린트"
+  },
+  {
+    "artworkId": 144,
+    "artistId": 49,
+    "artist": "이영희",
+    "title": "설악의 만추",
+    "size": "101 x 72 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 145,
+    "artistId": 49,
+    "artist": "이영희",
+    "title": "태항산의 비경",
+    "size": "103 x 75 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 146,
+    "artistId": 49,
+    "artist": "이영희",
+    "title": "동행",
+    "size": "43 x 60 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 147,
+    "artistId": 50,
+    "artist": "이치순",
+    "title": "숲",
+    "size": "38 x 45 (cm)",
+    "material": "화선지 먹물"
+  },
+  {
+    "artworkId": 148,
+    "artistId": 50,
+    "artist": "이치순",
+    "title": "계곡",
+    "size": "73 x 91 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 149,
+    "artistId": 50,
+    "artist": "이치순",
+    "title": "화진포",
+    "size": "53 x 65 (cm)",
+    "material": "아크릴"
+  },
+  {
+    "artworkId": 150,
+    "artistId": 51,
+    "artist": "임인성",
+    "title": "일손을 놓은 노동자를 위하여",
+    "size": "84.1 x 59.4 (cm)",
+    "material": "인화지 디지털 프린트"
+  },
+  {
+    "artworkId": 151,
+    "artistId": 51,
+    "artist": "임인성",
+    "title": "코로나 나빠요!",
+    "size": "84.1 x 59.4 (cm)",
+    "material": "인화지 디지털 프린트"
+  },
+  {
+    "artworkId": 152,
+    "artistId": 51,
+    "artist": "임인성",
+    "title": "진실의 조건Ⅰ",
+    "size": "84.1 x 59.4 (cm)",
+    "material": "인화지 디지털 프린트"
+  },
+  {
+    "artworkId": 153,
+    "artistId": 52,
+    "artist": "전경애",
+    "title": "합창",
+    "size": "130.3 x 162 (cm)",
+    "material": "캔버스에 유채"
+  },
+  {
+    "artworkId": 154,
+    "artistId": 52,
+    "artist": "전경애",
+    "title": "도시의 향기",
+    "size": "100 x 80.3 (cm)",
+    "material": "캔버스에 유채"
+  },
+  {
+    "artworkId": 155,
+    "artistId": 52,
+    "artist": "전경애",
+    "title": "아를의 거리",
+    "size": "91 x 91 (cm)",
+    "material": "캔버스에 유채"
+  },
+  {
+    "artworkId": 156,
+    "artistId": 53,
+    "artist": "전인애",
+    "title": "meaning",
+    "size": "72.5 x 60.5 (cm)",
+    "material": "acrylic.mixed media on canvas"
+  },
+  {
+    "artworkId": 157,
+    "artistId": 53,
+    "artist": "전인애",
+    "title": "meaning",
+    "size": "60.6 x 72.7 (cm)",
+    "material": "acrylic.mixed media on canvas"
+  },
+  {
+    "artworkId": 158,
+    "artistId": 53,
+    "artist": "전인애",
+    "title": "meaning",
+    "size": "19 x 27.5 (cm)",
+    "material": "acrylic.mixed media on canvas"
+  },
+  {
+    "artworkId": 159,
+    "artistId": 54,
+    "artist": "정귀조",
+    "title": "모란이 피기까지",
+    "size": "45.5 x 53 (cm)",
+    "material": "oil on canvas"
+  },
+  {
+    "artworkId": 160,
+    "artistId": 54,
+    "artist": "정귀조",
+    "title": "옛이야기",
+    "size": "60.6 x 72.7 (cm)",
+    "material": "oil on canvas"
+  },
+  {
+    "artworkId": 161,
+    "artistId": 54,
+    "artist": "정귀조",
+    "title": "고향가는 길",
+    "size": "45.5 x 53 (cm)",
+    "material": "oil on canvas"
+  },
+  {
+    "artworkId": 162,
+    "artistId": 55,
+    "artist": "정수복",
+    "title": "5월의 여왕",
+    "size": "32 x 32 (cm)",
+    "material": "Oil on canvas"
+  },
+  {
+    "artworkId": 163,
+    "artistId": 55,
+    "artist": "정수복",
+    "title": "가을",
+    "size": "23 x 33 (cm)",
+    "material": "Oil on canvas"
+  },
+  {
+    "artworkId": 164,
+    "artistId": 56,
+    "artist": "정옥련",
+    "title": "봄의 왈츠",
+    "size": "44.5 x 44.5 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 165,
+    "artistId": 56,
+    "artist": "정옥련",
+    "title": "봄이오는 소리",
+    "size": "45.5 x 53 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 166,
+    "artistId": 56,
+    "artist": "정옥련",
+    "title": "콘수에그라의 풍차",
+    "size": "39.5 x 39.5 (cm)",
+    "material": "혼합재료"
+  },
+  {
+    "artworkId": 167,
+    "artistId": 57,
+    "artist": "최영남",
+    "title": "여름숲",
+    "size": "48 x 75 (cm)",
+    "material": "한지에 수묵담채"
+  },
+  {
+    "artworkId": 168,
+    "artistId": 57,
+    "artist": "최영남",
+    "title": "산하",
+    "size": "47 x 72 (cm)",
+    "material": "한지에 수묵"
+  },
+  {
+    "artworkId": 169,
+    "artistId": 57,
+    "artist": "최영남",
+    "title": "함께 가는 길",
+    "size": "45 x 63 (cm)",
+    "material": "한지에 수묵담채"
+  },
+  {
+    "artworkId": 170,
+    "artistId": 58,
+    "artist": "최영순",
+    "title": "계곡에 숨은 정자",
+    "size": "45.5 x 53 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 171,
+    "artistId": 58,
+    "artist": "최영순",
+    "title": "영험한 소나무",
+    "size": "72.7 x 60.6 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 172,
+    "artistId": 58,
+    "artist": "최영순",
+    "title": "해바라기",
+    "size": "45.5 x 53 (cm)",
+    "material": "수묵담채"
+  },
+  {
+    "artworkId": 173,
+    "artistId": 59,
+    "artist": "최영심",
+    "title": "제주파도소리와 함께핀 꽃",
+    "size": "48 x 60 (cm)",
+    "material": "수묵채색"
+  },
+  {
+    "artworkId": 174,
+    "artistId": 59,
+    "artist": "최영심",
+    "title": "임진강가의 봄",
+    "size": "46 x 55 (cm)",
+    "material": "수묵채색"
+  },
+  {
+    "artworkId": 175,
+    "artistId": 59,
+    "artist": "최영심",
+    "title": "봄의 노래",
+    "size": "47 x 52 (cm)",
+    "material": "수묵채색"
+  },
+  {
+    "artworkId": 176,
+    "artistId": 60,
+    "artist": "한광수",
+    "title": "Rest",
+    "size": "50 x 73 (cm)",
+    "material": "Oil on Canvas"
+  },
+  {
+    "artworkId": 177,
+    "artistId": 60,
+    "artist": "한광수",
+    "title": "Rest",
+    "size": "45 x 65 (cm)",
+    "material": "Oil on Canvas"
+  },
+  {
+    "artworkId": 178,
+    "artistId": 60,
+    "artist": "한광수",
+    "title": "Rest",
+    "size": "45 x 65 (cm)",
+    "material": "Oil on Canvas"
+  },
+  {
+    "artworkId": 179,
+    "artistId": 61,
+    "artist": "현연희",
+    "title": "옛동산",
+    "size": "50 x 63 (cm)",
+    "material": "화선지"
+  },
+  {
+    "artworkId": 180,
+    "artistId": 61,
+    "artist": "현연희",
+    "title": "봄소식",
+    "size": "60 x 46 (cm)",
+    "material": "화선지"
+  },
+  {
+    "artworkId": 181,
+    "artistId": 61,
+    "artist": "현연희",
+    "title": "봄노래",
+    "size": "70 x 65 (cm)",
+    "material": "화선지"
+  },
+  {
+    "artworkId": 182,
+    "artistId": 62,
+    "artist": "홍화표",
+    "title": "봄",
+    "size": "32 x 68 (cm)",
+    "material": "화선지에 수묵담채"
+  },
+  {
+    "artworkId": 183,
+    "artistId": 62,
+    "artist": "홍화표",
+    "title": "여름",
+    "size": "32 x 68 (cm)",
+    "material": "화선지에 수묵담채"
+  },
+  {
+    "artworkId": 184,
+    "artistId": 62,
+    "artist": "홍화표",
+    "title": "가을",
+    "size": "32 x 68 (cm)",
+    "material": "화선지에 수묵담채"
+  },
+  {
+    "artworkId": 185,
+    "artistId": 63,
+    "artist": "황미경",
+    "title": "꿈",
+    "size": "41 x 53 (cm)",
+    "material": "watercolor on paper"
+  },
+  {
+    "artworkId": 186,
+    "artistId": 63,
+    "artist": "황미경",
+    "title": "접시꽃 당신",
+    "size": "54 x 23 (cm)",
+    "material": "watercolor on paper"
+  },
+  {
+    "artworkId": 187,
+    "artistId": 63,
+    "artist": "황미경",
+    "title": "농가풍경",
+    "size": "41 x 53 (cm)",
+    "material": "watercolor on paper"
+  },
+  {
+    "artworkId": 188,
+    "artistId": 64,
+    "artist": "황정숙",
+    "title": "해바라기",
+    "size": "53 x 45.5 (cm)",
+    "material": "oil on canvas"
+  },
+  {
+    "artworkId": 189,
+    "artistId": 64,
+    "artist": "황정숙",
+    "title": "연꽃",
+    "size": "45.5 x 53 (cm)",
+    "material": "oil on canvas"
+  },
+  {
+    "artworkId": 190,
+    "artistId": 64,
+    "artist": "황정숙",
+    "title": "소나무",
+    "size": "53 x 45.5 (cm)",
+    "material": "oil on canvas"
+  }
+]

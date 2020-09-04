@@ -9,6 +9,7 @@ import { Artwork } from '../../models/Artwork';
 import { uploadS3 } from '../utils/common';
 
 import * as fileInfo from '../filenames.json';
+import * as artworkList from '../artworks.json';
 import { HTTP_CODE, DB_CODE } from '../../defines';
 
 const upload = multer({
@@ -34,7 +35,7 @@ router.post(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const inputFIles = req.files as Express.Multer.File[];
-      await new Promise((resolve) => {
+      await new Promise((resolve, reject) => {
         let counter = 0;
         inputFIles.forEach(async (file) => {
           const fileName = `${sha256(uuid.v4())}.jpg`;
@@ -42,6 +43,10 @@ router.post(
           const artworkId = fileInfo.find((elem: fileInfoInterface) => {
             if (elem.before === file.originalname.split('.')[0]) return true;
           })?.artworkId;
+          const artworkInfo = artworkList.find((elem) => {
+            return elem.artworkId === artworkId;
+          });
+          if (!artworkInfo) return reject('NO SUCH ARTWORK ON THE LIST');
           const sharpImage = sharp(file.buffer)
             .clone()
             .resize({
@@ -65,6 +70,10 @@ router.post(
             id: artworkId ?? undefined,
             fileName,
             artistId,
+            artistName: artworkInfo.artist,
+            title: artworkInfo.title,
+            size: artworkInfo.size,
+            material: artworkInfo.material,
           });
           counter = counter + 1;
           if (counter >= inputFIles.length) resolve();

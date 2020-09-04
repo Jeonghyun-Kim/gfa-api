@@ -48,8 +48,9 @@ export class Artist extends Model<Artist> {
   @Column
   id!: number;
 
+  @AllowNull(false)
   @Column
-  artistName?: string;
+  artistName!: string;
 
   @Column(DataType.TEXT)
   detail?: string;

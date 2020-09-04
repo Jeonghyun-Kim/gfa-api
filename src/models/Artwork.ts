@@ -15,7 +15,15 @@ import {
 import { Artist } from './Artist';
 
 @DefaultScope(() => ({
-  attributes: ['id', 'fileName', 'artistId'],
+  attributes: [
+    'id',
+    'fileName',
+    'artistId',
+    'artistName',
+    'title',
+    'size',
+    'material',
+  ],
 }))
 @Table({
   tableName: 'artwork',
@@ -34,6 +42,22 @@ export class Artwork extends Model<Artwork> {
   @AllowNull(false)
   @Column
   artistId!: number;
+
+  @AllowNull(false)
+  @Column
+  artistName!: string;
+
+  @AllowNull(false)
+  @Column
+  title!: string;
+
+  @AllowNull(false)
+  @Column
+  size!: string;
+
+  @AllowNull(false)
+  @Column
+  material!: string;
 
   @CreatedAt
   @Column

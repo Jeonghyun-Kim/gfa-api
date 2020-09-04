@@ -11,6 +11,8 @@ import { HTTP_CODE, DB_CODE, THUMBNAIL_SIZE } from '../../defines';
 import { uploadS3 } from '../utils/common';
 import { convertImage } from '../utils/image';
 
+import * as artistList from '../artist_list.json';
+
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
@@ -40,9 +42,9 @@ router.post(
   '/',
   uploadArtwork,
   async (req: Request, res: Response, next: NextFunction) => {
-    const { artistId } = req.body;
+    const { artistId, artistName, detail } = req.body;
 
-    if (!artistId)
+    if (!artistId || !artistName)
       return res
         .status(HTTP_CODE.BAD_REQUEST)
         .json({ error: DB_CODE.CHECK_REQUEST });
@@ -147,6 +149,8 @@ router.post(
 
       const artist = await Artist.create({
         id: artistId,
+        artistName,
+        detail,
         thumbFileName,
         landscapeFileName,
         portraitFileName,
@@ -163,7 +167,7 @@ router.put(
   '/',
   uploadArtwork,
   async (req: Request, res: Response, next: NextFunction) => {
-    const { artistId } = req.body;
+    const { artistId, artistName, detail } = req.body;
 
     if (!artistId)
       return res
@@ -180,7 +184,7 @@ router.put(
       ? (req.files['portrait'][0] as Express.Multer.File)
       : undefined;
 
-    if (!repFile && !landFile && !portFile)
+    if (!artistName && !detail && !repFile && !landFile && !portFile)
       return res
         .status(HTTP_CODE.BAD_REQUEST)
         .json({ error: DB_CODE.FILE_EMPTY });
@@ -344,14 +348,14 @@ router.post(
     try {
       const inputFiles = req.files as Express.Multer.File[];
       let counter = 0;
-      await new Promise((resolve) => {
+      await new Promise((resolve, reject) => {
         inputFiles.forEach(async (file) => {
           const thumbFileName = `${sha256(uuid.v4())}.jpg`;
           const artistId = Number(file.originalname.split('_')[0]);
-          // const sharpImage = convertImage(sharp(file.buffer), 40, {
-          //   width: 300,
-          //   height: 300,
-          // });
+          const artistInfo = artistList.find((elem) => {
+            return artistId === elem.id;
+          });
+          if (!artistInfo) return reject('NO SUCH ARTIST');
           const sharpImage = sharp(file.buffer)
             .clone()
             .resize({
@@ -371,6 +375,8 @@ router.post(
           }
           await Artist.create({
             id: artistId,
+            artistName: artistInfo.artistName,
+            detail: artistInfo.detail,
             thumbFileName,
           });
           counter = counter + 1;
