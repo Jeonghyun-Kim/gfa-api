@@ -30,13 +30,22 @@ const app: Application = express();
 
 sequelize.sync();
 
-// const corsOptions = {
-//   origin: process.env.NODE_ENV === 'production' ? process.env.SERVER_URL : 'http://localhost',
-//   optionsSuccessStatus: 200,
-// };
+const corsOptions = {
+  origin: 'https://gfaa.ondisplay.co.kr',
+  optionsSuccessStatus: 200,
+};
 
-// app.use(cors(corsOptions));
-app.use(cors());
+if (isProduction) {
+  app.use(cors(corsOptions));
+  app.use(
+    morgan(CUSTOM, {
+      stream: { write: (message: string) => logger.info(message) },
+    }),
+  );
+} else {
+  app.use(cors());
+  app.use(morgan('dev'));
+}
 app.use(helmet());
 
 app.use(
@@ -50,16 +59,6 @@ app.use(
     },
   }),
 );
-
-if (isProduction) {
-  app.use(
-    morgan(CUSTOM, {
-      stream: { write: (message: string) => logger.info(message) },
-    }),
-  );
-} else {
-  app.use(morgan('dev'));
-}
 
 app.use(express.static('./public'));
 app.use(bodyParser.json());

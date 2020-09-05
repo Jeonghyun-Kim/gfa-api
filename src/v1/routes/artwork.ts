@@ -129,4 +129,26 @@ router.put(
   },
 );
 
+// router.post(
+//   '/test',
+//   upload.single('image'),
+//   (req: Request, res: Response, next: NextFunction) => {
+//     try {
+//       const file = req.file.buffer;
+//       if (!file)
+//         return res
+//           .status(HTTP_CODE.BAD_REQUEST)
+//           .json({ error: DB_CODE.FILE_EMPTY });
+//       sharp(file)
+//         .resize({ width: 2560, height: 1460, fit: 'cover' })
+//         .jpeg({ quality: 80, chromaSubsampling: '4:4:4' })
+//         .toFile('./public/tmp/helloWorld.jpg');
+
+//       res.json({ error: 0 });
+//     } catch (err) {
+//       next(err);
+//     }
+//   },
+// );
+
 export default router;
