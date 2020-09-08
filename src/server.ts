@@ -22,7 +22,7 @@ interface Err extends Error {
   status: number;
 }
 
-const portHttp = 80;
+const portHttp = 8080;
 const portHttps = 443;
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -114,10 +114,6 @@ app.use((err: Err, _req: Request, res: Response, _next: NextFunction) => {
   });
 });
 
-http.createServer(app).listen(portHttp, () => {
-  logger.info(`HTTP SERVER LISTIENING ON PORT ${portHttp}`);
-});
-
 if (isProduction) {
   const sslOptions = {
     ca: fs.readFileSync(
@@ -133,5 +129,9 @@ if (isProduction) {
 
   https.createServer(sslOptions, app).listen(portHttps, () => {
     logger.info(`HTTPS SERVER LISTIENING ON PORT ${portHttps}`);
+  });
+} else {
+  http.createServer(app).listen(portHttp, () => {
+    logger.info(`HTTP SERVER LISTIENING ON PORT ${portHttp}`);
   });
 }

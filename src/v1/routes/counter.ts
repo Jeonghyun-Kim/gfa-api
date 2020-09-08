@@ -6,7 +6,7 @@ import { HTTP_CODE, DB_CODE } from '../../defines';
 
 const router = Router();
 
-router.get('/', async (req: Request, res: Response, next: NextFunction) => {
+router.get('/', async (_: Request, res: Response, next: NextFunction) => {
   try {
     const counts = await Counter.count({
       distinct: true,
@@ -20,7 +20,7 @@ router.get('/', async (req: Request, res: Response, next: NextFunction) => {
 });
 
 router.post('/', async (req: Request, res: Response, next: NextFunction) => {
-  const { path, userId } = req.body;
+  const { path, userId, deviceInfo } = req.body;
   if (!userId)
     return res
       .status(HTTP_CODE.BAD_REQUEST)
@@ -34,7 +34,12 @@ router.post('/', async (req: Request, res: Response, next: NextFunction) => {
   try {
     const sessionId = req.sessionID;
 
-    const counter = await Counter.create({ path, userId, sessionId });
+    const counter = await Counter.create({
+      path,
+      userId,
+      deviceInfo,
+      sessionId,
+    });
 
     res.json({ counter, error: 0 });
   } catch (err) {

@@ -140,9 +140,10 @@ router.put(
 //           .status(HTTP_CODE.BAD_REQUEST)
 //           .json({ error: DB_CODE.FILE_EMPTY });
 //       sharp(file)
-//         .resize({ width: 2560, height: 1460, fit: 'cover' })
-//         .jpeg({ quality: 80, chromaSubsampling: '4:4:4' })
-//         .toFile('./public/tmp/helloWorld.jpg');
+//         .resize({ width: 315, height: 383, fit: 'cover' })
+//         .extract({ top: 5, left: 5, width: 307, height: 375 })
+//         .jpeg({ quality: 60, chromaSubsampling: '4:4:4' })
+//         .toFile(`./public/tmp/${req.file.originalname.split('.')[0]}.jpg`);
 
 //       res.json({ error: 0 });
 //     } catch (err) {

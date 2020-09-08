@@ -7,10 +7,11 @@ import {
   UpdatedAt,
   DeletedAt,
   DefaultScope,
+  DataType,
 } from 'sequelize-typescript';
 
 @DefaultScope(() => ({
-  attributes: ['id', 'userId', 'path', 'createdAt'],
+  attributes: ['id', 'userId', 'deviceInfo', 'path', 'createdAt'],
 }))
 @Table({
   tableName: 'counter',
@@ -28,6 +29,9 @@ export class Counter extends Model<Counter> {
   @AllowNull(false)
   @Column
   userId?: string;
+
+  @Column(DataType.TEXT)
+  deviceInfo?: string;
 
   @AllowNull(false)
   @Column
