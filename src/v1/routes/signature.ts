@@ -23,14 +23,17 @@ const SECRET = process.env.ADMIN_SECRET!;
 const router = Router();
 
 router.get('/', async (req: Request, res: Response, next: NextFunction) => {
-  const { password } = req.body;
+  const password = req.headers.authorization;
+  console.log(password);
   try {
     if (password !== SECRET)
       return res
         .status(HTTP_CODE.FORBIDDEN)
         .json({ error: DB_CODE.PASSWORD_WRONG });
 
-    const signatures = await Signature.findAll({});
+    const signatures = await Signature.findAll({
+      order: [['createdAt', 'DESC']],
+    });
 
     res.json({ signatures, error: 0 });
   } catch (err) {
