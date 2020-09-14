@@ -139,12 +139,52 @@ router.put(
 //         return res
 //           .status(HTTP_CODE.BAD_REQUEST)
 //           .json({ error: DB_CODE.FILE_EMPTY });
+
+//       // const sharpImage = sharp(file);
+
+//       // const sharpLandscape = sharpImage
+//       //   .clone()
+//       //   .extract({ left: 0, top: 146, width: 2560, height: 1022 })
+//       //   .jpeg({ chromaSubsampling: '4:4:4', quality: 80 });
+//       // const sharpPortrait = sharpImage
+//       //   .clone()
+//       //   .extract({ left: 915, top: 0, width: 730, height: 1460 })
+//       //   .jpeg({ chromaSubsampling: '4:4:4', quality: 80 });
+//       // sharpLandscape.toFile('./public/tmp/land.jpg');
+//       // sharpPortrait.toFile('./public/tmp/port.jpg');
+
 //       sharp(file)
-//         .resize({ width: 315, height: 383, fit: 'cover' })
-//         .extract({ top: 5, left: 5, width: 307, height: 375 })
+//         .resize({ width: 1000, fit: 'contain' })
+//         // .extract({ top: 5, left: 5, width: 307, height: 375 })
 //         .jpeg({ quality: 60, chromaSubsampling: '4:4:4' })
+//         // .jpeg({ quality: 40 })
+//         // .png()
 //         .toFile(`./public/tmp/${req.file.originalname.split('.')[0]}.jpg`);
 
+//       res.json({ error: 0 });
+//     } catch (err) {
+//       next(err);
+//     }
+//   },
+// );
+
+// router.get(
+//   '/hello',
+//   async (req: Request, res: Response, next: NextFunction) => {
+//     try {
+//       const artworks = await Artwork.findAll();
+//       await new Promise((resolve) => {
+//         let count = 0;
+//         artworks.forEach((artwork) => {
+//           artwork.update({
+//             size: artwork.size.replace('(', '').replace(')', ''),
+//           });
+//           count += 1;
+//           if (count === artworks.length) {
+//             resolve();
+//           }
+//         });
+//       });
 //       res.json({ error: 0 });
 //     } catch (err) {
 //       next(err);

@@ -2,6 +2,7 @@ import * as express from 'express';
 import { Application, Request, Response, NextFunction } from 'express';
 import * as bodyParser from 'body-parser';
 import * as session from 'express-session';
+import * as memoryStore from 'memorystore';
 import * as morgan from 'morgan';
 import * as cors from 'cors';
 import * as helmet from 'helmet';
@@ -14,6 +15,8 @@ import logger from './config/winston_config';
 import { sequelize } from './sequelize';
 import indexRouter from './v1/index';
 import { HTTP_CODE, DB_CODE } from './defines';
+
+const MemoryStore = memoryStore(session);
 
 const CUSTOM =
   ':remote-addr - :remote-user ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"';
@@ -50,6 +53,9 @@ app.use(helmet());
 
 app.use(
   session({
+    store: new MemoryStore({
+      checkPeriod: 86400000,
+    }),
     secret: process.env.COOKIE_SECRET!,
     resave: false,
     saveUninitialized: true,
